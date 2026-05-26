@@ -1,7 +1,7 @@
 /*
 	Name: BuscaBinaria.cpp
 	Date: 26/05/26 10:58
-	Description: ordenaÁ„o Merge Sort seguida de Busca Bin·ria.
+	Description: ordena√ß√£o Merge Sort seguida de Busca Bin√°ria.
 */
 
 #include <stdio.h>
@@ -11,10 +11,10 @@ int buscaBinaria(int *V, int tam, int elem);
 void mergeSort(int *V, int inicio, int fim);
 void merge(int *V, int inicio, int meio, int fim);
 
-int main(){ // Definido explicitamente como int
+int main(){
 	int vet[] = {17, 38, 12, 2, 44, 25, 19, -4, 30, 10};
 	int tam = sizeof(vet)/sizeof(int);
-	int i, elem; // Declarada a vari·vel elem
+	int i, elem;
 	
 	puts("\nVetor original :");
 	for(i = 0; i < tam; i++)
@@ -26,11 +26,11 @@ int main(){ // Definido explicitamente como int
 	for(i = 0; i < tam; i++)
 		printf("%d|", vet[i]);
 	
-	// Solicita o elemento para a busca bin·ria
+	// Solicita o elemento para a busca bin√°ria
 	printf("\n\nDigite o elemento que deseja buscar: ");
 	scanf("%d", &elem);
 	
-	// Corrigido a passagem do vetor (de *V para vet)
+	
 	int resultado = buscaBinaria(vet, tam, elem); 
 	
 	if(resultado == -1) {
@@ -57,7 +57,7 @@ int buscaBinaria(int *V, int tam, int elem){
 		else{
 			printf("\nElemento localizado na %da posicao do vetor, no indice: %d\n", meio + 1, meio);
 			printf("Localizado com %d comparacoes", comp);
-			return meio; // Retorna o Ìndice onde foi encontrado
+			return meio; // Retorna o √≠ndice onde foi encontrado
 		}
 	}
 	return -1;
